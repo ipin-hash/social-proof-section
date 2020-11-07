@@ -37,9 +37,7 @@ body {
   margin-bottom: 5em;
 }
 
-.right, .left, .card {
-  flex: 1;
-}
+.right, .left, .card { flex: 1; }
 
  h1.title {
   color: var(--Very-Dark-Magenta);
@@ -62,12 +60,8 @@ p.desc {
 li {
   background-color: var(--Light-Grayish-Magenta);
   display: flex;
-  padding: 11px;
-  /* max-width: 58%; */
   right: 0;
   align-items: center;
-  /* min-width: 143px; */
-  
   padding: 13px 50px;
   border-radius: 10px;
   float: right;
@@ -76,11 +70,11 @@ li {
 }
 
 li:first-child {
-  margin-right: 9.5em;
+  margin-right: 9.3em;
 }
 
 li:nth-child(2) {
-  margin-right: 4.75em;
+  margin-right: 4.65em;
 }
 
 p.rate-text {
@@ -92,9 +86,7 @@ p.rate-text {
   color: var(--Very-Dark-Magenta);
 }
 
-.stars img {
-  width: 15px;
-}
+.stars img { width: 15px; }
 
 .cards {
   display: flex;
@@ -162,4 +154,86 @@ blockquote {
   line-height: 1.4em;
   letter-spacing: -0.05em;
   color: var(--White);
+}
+
+
+/* ----- Responesive ----- */
+@media (max-width : 375px) {
+
+
+  body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px; 
+    /* font weight 400, 500, 700 */
+    background-image: 
+    url(./images/bg-pattern-bottom-mobile.svg),                   
+    url(./images/bg-pattern-top-mobile.svg);
+    background-position: bottom right, top left;
+    background-repeat: no-repeat no-repeat;
+    line-height: 1.4;
+  }
+
+  .container { margin: 0 2em; }
+
+  .header{
+    flex-direction: column;
+    margin-top: 5em;
+    margin-bottom: 0;
+  }
+
+  h1.title {
+    margin-right: 0em;
+    text-align: center;
+    font-size: 2em;
+  }
+
+ 
+p.desc {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 14px;
+  margin-right: 0;
+}
+.left{ margin-top: 3.5em; }
+
+li {
+  text-align: center;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 15px 0 ;
+  border-radius: 10px;
+  float: none;
+  margin-bottom: 20px;
+}
+
+li:first-child { margin-right: 0em;  }
+
+li:nth-child(2) { margin-right: 0em; }
+
+.cards {
+  flex-direction: column;
+  margin-bottom: 5em;
+  margin-top: 2em;
+}
+
+.card { margin-bottom: 1em !important; }
+
+  .card:first-child,
+  .card:nth-child(2),
+  .card:nth-child(3) {
+    margin: 0; 
+  }
+  
+  blockquote {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0em;
+    color: var(--White);
+
+  }
+   
+
+
 }
